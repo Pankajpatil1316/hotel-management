@@ -1,15 +1,7 @@
-package com.hotelmanagement.hotel.entities;
+package com.hotelmanagement.user.service.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-
-@Entity
-@Table(name = "hotels")
 public class Hotel {
 
-	@Id
 	private String id;
 	
 	private String name;
@@ -18,8 +10,6 @@ public class Hotel {
 	
 	private String about;
 
-	
-	
 	public Hotel() {
 		super();
 	}
@@ -68,6 +58,7 @@ public class Hotel {
 	public String toString() {
 		return "Hotel [id=" + id + ", name=" + name + ", location=" + location + ", about=" + about + "]";
 	}
+
 	
 	
 }

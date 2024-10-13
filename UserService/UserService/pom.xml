@@ -8,11 +8,11 @@
 		<version>2.7.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.hotelmanagement.hotel</groupId>
-	<artifactId>HotelService</artifactId>
+	<groupId>com.hotelmanagement.user.service</groupId>
+	<artifactId>UserService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>HotelService</name>
-	<description>This service is for storing data of hotels</description>
+	<name>UserService</name>
+	<description>This is user service</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -26,22 +26,26 @@
 		<tag/>
 		<url/>
 	</scm>
+	
+	
+	
 	<properties>
 		<java.version>8</java.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 	    <maven.compiler.target>1.8</maven.compiler.target>
-        <spring-cloud.version>2021.0.3</spring-cloud.version>
+	    <spring-cloud.version>2021.0.3</spring-cloud.version>
 	</properties>
 
+	
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		
-				<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
@@ -59,19 +63,45 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+		</dependency>
 		
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
+		
+		<dependency>
+  			 <groupId>org.springframework.cloud</groupId>
+    		 <artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+		
 		<dependency>
       		<groupId>org.springframework.cloud</groupId>
       		<artifactId>spring-cloud-starter-config</artifactId>
     	</dependency>
 		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/io.github.resilience4j/resilience4j-spring -->
+		<dependency>
+		    <groupId>io.github.resilience4j</groupId>
+		    <artifactId>resilience4j-spring-boot2</artifactId>
+		</dependency>
+		
 	</dependencies>
 
-		<dependencyManagement>
+	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
@@ -82,6 +112,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	
 	
 	<build>
 		<plugins>
